@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Студія</title>
+    <!-- спочатку шрифти -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" />
+    <!--  нормалізатор -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+    <!-- мої стилі -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!-- шапка сайта з навігацією-->
+    <header class="header-section">
+      <a class="link" href="./index.html">
+        <span class="logo web">Web</span>
+        <span class="logo studio">Studio</span>
+      </a>
+      <!-- Навігація по сторінках сайта -->
+      <nav>
+        <ul class="header-nav list">
+          <li class="header-nav-item">
+            <a class="header-nav link current" href="./index.html">Студія</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav link" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav link" href="#contacts">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Лінки контактів -->
+      <ul class="header-contact list">
+        <li class="header-contact-item">
+          <a class="header-contact link" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+        <li class="header-contact-item">
+          <a class="header-contact link" href="tel:+380961111111"
+            >+38 096 111 11 11</a
+          >
+        </li>
+      </ul>
+    </header>
+    <!-- унікальний контент сторінки -->
+    <main>
+      <!--Головний банер  сайта -->
+      <section class="hero-section">
+        <h1 class="title-first ">
+          Ефективні рішення для <br />вашого бізнесу
+        </h1>
+        <button class="hero-button btn" type="button" >Замовити послугу</button>
+      </section>
+      <!-- Особливості -->
+      <section class="section">
+        <h2 class="feature-title title-second visually-hidden">Особливості</h2>
+        <ul class="feature-list list">
+          <li>
+            <h3 class="title-third uppercase">увага до деталей</h3>
+            <p class="feature-text">
+              Ідейні міркування, і навіть початок повсякденної роботи з
+              формування позиції.
+            </p>
+          </li>
+          <li>
+            <h3 class="title-third uppercase">пунктуальність</h3>
+            <p class="feature-text">
+              Завдання організації, особливо рамки і місце навчання кадрів тягне
+              у себе.
+            </p>
+          </li>
+          <li>
+            <h3 class="title-third uppercase">планування</h3>
+            <p class="feature-text">
+              Так само консультація з широким активом значною мірою зумовлює.
+            </p>
+          </li>
+          <li>
+            <h3 class="title-third uppercase">сучасні технології</h3>
+            <p class="feature-text">
+              Значимість цих проблем настільки очевидна, що реалізація планових
+              завдань.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <!-- Чим ми займаємося deal-->
+      <section class="section">
+        <h2 class="title-second">Чим ми займаємося</h2>
+        <ul class="deal-list list">
+          <li class="deal-item">
+            <img
+              class="deal-img"
+              src="./images/view1.jpg"
+              alt="Найкращі алгоритми"
+            />
+          </li>
+          <li class="deal-item">
+            <img
+              class="deal-img"
+              src="./images/view2.jpg"
+              alt="Адаптуємо до різних дівайсів "
+            />
+          </li>
+          <li class="deal-item">
+            <img
+              class="deal-img"
+              src="./images/view3.jpg"
+              alt="Професійний дизайн"
+            />
+          </li>
+        </ul>
+      </section>
+      <!-- Наша команда -->
+      <section class="section-team">
+        <h2 class="team-title title-second">Наша команда</h2>
+        <ul class="team-list list">
+          <li class="team-card-item">
+            <img
+              class="card-image"
+              src="./images/portrait1.jpg"
+              alt="Ігор Дем'яненко"
+            />
+            <h3 class="card-name title-third no-uppercase">Ігор Дем'яненко</h3>
+            <p class="card-position">Product Designer</p>
+          </li>
+          <li class="team-card-item">
+            <img
+              class="card-image"
+              src="./images/portrait2.jpg"
+              alt="Ольга Рєпіна"
+            />
+            <h3 class="card-name title-third">Ольга Рєпіна</h3>
+            <p class="card-position">Frontend Developer</p>
+          </li>
+          <li class="team-card-item">
+            <img
+              class="card-image"
+              src="./images/portrait3.jpg"
+              alt="Микола Тарасов"
+            />
+            <h3 class="card-name title-third">Микола Тарасов</h3>
+            <p class="card-position">Marketing</p>
+          </li>
+          <li class="team-card-item">
+            <img
+              class="card-image"
+              src="./images/portrait4.jpg"
+              alt="Михайло Єрмаков"
+            />
+            <h3 class="card-name title-third">Михайло Єрмаков</h3>
+            <p class="card-position">UI Designer</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer id="contacts" class="footer-section">
+      <a class="logo link" href="./index.html"
+        ><span class="logo web">Web</span
+        ><span class="logo studio">Studio</span>
+      </a>
+      <address class="address-section">
+        <ul class="footer-list list">
+          <li class="footer-list-item">
+            <a
+              class="footer-link-map link"
+              href="https://goo.gl/maps/kqAVkC1o9cEqBrma6"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >м. Київ, пр-т Лесі Українки, 26</a
+            >
+          </li>
+          <li class="footer-list-item">
+            <a class="footer-link link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="footer-list-item">
+            <a class="footer-link link" href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+      </address>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- embeded style -->
+    <style>
+      li {
+        color: #000000;
+      }
+      ul li:hover {
+        color: teal;
+      }
+      ul li:focus {
+        color: olivedrab;
+      }
+      .list-bottom > li {
+        color: red;
+        border: 1px solid #000000;
+      }
+      .child-list > li {
+        font-family: "Caveat", cursive;
+        font-family: "Indie Flower", cursive;
+        font-size:24px;
+        color: orange;
+      }
+    </style>
+    <ul class="list-bottom">
+      <li>something 1</li>
+      <!--буде колір red;-->
+      <li>something 2</li>
+      <!--буде колір red;-->
+      <li>
+        <!--буде колір red;-->
+        <ul>
+          <li>something 3</li>
+          <!--буде колір red, бо наслідує від батьковського li;-->
+          <li>something 4</li>
+          <!--буде колір red, бо наслідує від батьковського li;-->
+        </ul>
+        <ul class="child-list">
+          <li>something 5</li>
+          <!--буде колір orange;-->
+          <li>something 6</li>
+          <!--буде колір orange;-->
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

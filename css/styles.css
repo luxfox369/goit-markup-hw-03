@@ -1,0 +1,278 @@
+/* змінні */
+/* палітра проекта */
+:root {
+  --prime-bg-color--: #ffffff; /*білий*/
+  --second-bg-color--: #2f303a; /*темно сірий*/
+  --title-ccolor--: #212121; /*чорний*/
+  --accent-color--: #2196f3; /*голубий*/
+  --text-color--: #757575; /*сірий*/
+
+  /* шрифти проекта  */
+  --prime-font-family--: "Roboto", sans-serif;
+  --second-font-family--: "Raleway", sans-serif;
+}
+/* глобальні налаштування */
+body {
+  font-family: var(--prime-font-family--); /*'Roboto', sans-serif*/
+  color: var(--text-color--);
+  background-color: var(--prime-bg-color--);
+}
+/* скриває елемент */
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+/* забирає маркер спимку */
+.list {
+  list-style: none;
+}
+/* забирає рамку */
+.btn {
+  font-family: var(--prime-font-family--);
+  border: none;
+}
+/* забирає підкреслення  */
+.link {
+  text-decoration: none;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* h1 */
+.title-first {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: calc(60 / 44);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--title-color--);
+  margin-top:200px;
+  /* margin-bottom:30px; */
+}
+/* h2 */
+.title-second {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-ccolor--);
+}
+/* h3 */
+.title-third {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-align: center;
+  /* text-transform: uppercase; */
+  color: var(--title-ccolor--);
+}
+/* стилі header */
+/* Навігація по сторінках сайта */
+.header-section {
+  /* спільний шрифт */
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+}
+/* logo */
+.logo {
+  font-family: "Raleway", sans-serif; /*var*/
+  font-style: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  letter-spacing: 3%;
+}
+.logo.web {
+  color: var(--accent-color--);
+}
+.logo.studio {
+  color: #000;
+}
+
+/* вигляд мейл і телефон */
+.header-contact {
+  color: var(--text-color--);
+}
+/* вигляд елементів списка посилань навігації */
+.header-nav {
+  color: var(--title-ccolor--);
+}
+/* реакція на наведення на елемент списка посилання  */
+.header-nav:focus,
+.header-nav:hover,
+.header-contact:focus,
+.header-contact:hover {
+  color: var(--accent-color--);
+}
+/* підсвітка посилання активної сторінки */
+/* підкреслює активований лінк навігації */
+.current {
+  color: var(--accent-color--);
+}
+
+/* стилі index */
+/* секція hero */
+/* hero - title-first */
+.hero-section {
+  color: var(--prime-bg-color--); /*білий*шрифт */
+  background-color: var(--second-bg-color--); /*темн осірий фон*/
+  text-align:center;
+  /* width: 1600px;
+    height: 600px;
+    left: 0px;
+    top: 80px; */
+}
+
+.hero-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color--);
+  color: var(--prime-bg-color);
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  display:inline-block;
+   margin: 30px auto;
+  /* margin-top:30px; */
+  text-align: center;
+  
+}
+.hero-button:focus,
+.hero-button:hover {
+ background: #188CE8;
+  /* mix-blend-mode: normal;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px; */
+}
+/* секція Особливості */
+/* h2 схований */
+/* h3 - .tille-third */
+.feature-text {
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--text-color--);
+}
+/* секція Чим ми займаємось */
+/*h2 - .title-second*/
+.deal-img {
+  width: 370px;
+  height: 294px;
+}
+/* секція Наша команда */
+/* h2 Наша команда - title-second */
+.section-team {
+  /* width: 1600px;
+    height: 648px;
+    left: 0px;
+    top: 1446px;  */
+  background: #f5f4fa;
+}
+.team-card-item {
+  width: 270px;
+  height: 368px;
+  left: 815px;
+  top: 1632px;
+  background-color: var(--prime-bg-color--);
+}
+
+.card-image {
+  width: 270px;
+  height: 260px;
+}
+/* h3 - card-name title-second */
+/* position */
+.card-position {
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-color--);
+}
+
+/* стилі portfolio */
+/* h1 Портфоліо -title-first схований */
+
+/* кнопки фільтра проектів */
+.filter-button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-ccolor--);
+  background: #f5f4fa;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+/* кнопки фільтра проектів при hover */
+.filter-button:focus,
+.filter-button:hover {
+  color: var(--prime-bg-color--);
+  background-color: var(--accent-color--);
+}
+
+/* projects */
+/* h2 - title-econd  */
+.project-img {
+  width: 370px;
+  height: 294px;
+  border: 1px;
+  border-color: #eeeeee;
+}
+/*h2 title-project */
+.title-project {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(36 / 18);
+  letter-spacing: 0.06em;
+  color: var(--title-ccolor--);
+}
+.project-item {
+  text-align: center;
+}
+.project-type {
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.03em;
+  color: var(--text-color--);
+}
+/* стилі footer*/
+.footer-section {
+  background-color: var(--second-bg-color--);
+}
+/* спільний шрифт для блоку address */
+.footer-section .logo.studio {
+  color: var(--prime-bg-color--);
+}
+.address-section {
+  font-style: normal;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+}
+.footer-link {
+  color: rgba(255, 255, 255, 0.6);
+}
+/* адреса  */
+.footer-link-map {
+  color: var(--prime-bg-color--);
+}
+
+/* реакція на наведення мишки або клавіатури на любий лінк футера */
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accent-color--);
+}
+.footer-link-map:hover,
+.footer-link-map:focus {
+  color: var(--accent-color--);
+}
