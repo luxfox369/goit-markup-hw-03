@@ -16,27 +16,33 @@ body {
   font-family: var(--prime-font-family--); /*'Roboto', sans-serif*/
   color: var(--text-color--);
   background-color: var(--prime-bg-color--);
-  width:1600px;
+  width: 1600px;
 }
 
 /* reset */
-h1,h2,h3,h4,h5,h6,p {
-  margin:0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 /* .title-first,.title-second,.title-third{
    margin:0;
 } */
 ul {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 li {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 img {
-  display:block;
+  display: block;
 }
 a {
   text-decoration: none;
@@ -48,16 +54,16 @@ a {
 }
 /* контейнер для feature/deal/team-list/portfolio */
 /* header/footer/hero/ourteam ширина 1600 тому обмежела body 1600 */
-.container{
-  width:1200px;
-  margin:0 auto;/*вертик забирає горизонтально центрує*/
+.container {
+  width: 1200px;
+  margin: 0 auto; /*вертик забирає горизонтально центрує*/
 }
 
 /* забирає рамку */
 .btn {
   font-family: var(--prime-font-family--);
   border: none;
- }
+}
 
 .uppercase {
   text-transform: uppercase;
@@ -72,7 +78,7 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--title-color--);
- }
+}
 /* h2 */
 .title-second {
   font-weight: 700;
@@ -104,7 +110,7 @@ a {
 /* logo */
 .logo {
   font-family: "Raleway", sans-serif; /*var*/
-  font-style: 700;
+  font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
   letter-spacing: 3%;
@@ -117,37 +123,37 @@ a {
 }
 /* весь header у flex container */
 .header-section {
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   padding-top: 24px;
-  padding-bottom:25px;
-  outline:1px dashed red;
-  }
+  padding-bottom: 25px;
+  /* outline: 1px dashed red; */
+}
 
 /* навігація  в header  flex container*/
-.header-nav-list{
-  display:flex;
+.header-nav-list {
+  display: flex;
   justify-content: space-between;
   /* margin-left:93px; */
 }
 /* вигляд елементів списка посилань навігації */
 .header-nav-link {
   color: var(--title-ccolor--);
-  margin-right:50px;
+  margin-right: 50px;
 }
-.header-nav-item:last-child{
-  margin-right:0;
+.header-nav-item:last-child {
+  margin-right: 0;
 }
 
-.header-contact-list{
-  display:flex;
+.header-contact-list {
+  display: flex;
 }
-.header-contact-item{
-  margin-left:50px;
+.header-contact-item {
+  margin-left: 50px;
 }
-.header-contact-item:first-child{
-  margin-left:0;
+.header-contact-item:first-child {
+  margin-left: 0;
 }
 /* вигляд мейл і телефон */
 .header-contact-link {
@@ -172,7 +178,7 @@ a {
 .hero-section {
   color: var(--prime-bg-color--); /*білий*шрифт */
   background-color: var(--second-bg-color--); /*темн осірий фон*/
-  text-align:center;
+  text-align: center;
   /* width: 1600px;
     height: 600px;
     left: 0px;
@@ -189,15 +195,14 @@ a {
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  display:inline-block;
-   margin: 30px auto;
+  display: inline-block;
+  margin: 30px auto;
   /* margin-top:30px; */
   text-align: center;
-  
 }
 .hero-button:focus,
 .hero-button:hover {
- background: #188CE8;
+  background: #188ce8;
   /* mix-blend-mode: normal;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px; */
@@ -297,25 +302,49 @@ a {
   letter-spacing: 0.03em;
   color: var(--text-color--);
 }
+
 /* стилі footer*/
 .footer-section {
   background-color: var(--second-bg-color--);
+  border: 1px solid transparent;
 }
 /* спільний шрифт для блоку address */
 .footer-section .logo.studio {
   color: var(--prime-bg-color--);
 }
-.address-section {
-  font-style: normal;
-  font-size: 14px;
-  line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
+
+.logo.icon {
+  display:block;
+  margin-top: 60px;
+  margin-left: 215px;
+  margin-bottom: 20px;
+  padding-right:7px;
+  /* outline: 1px solid red; */
 }
+/* блок адреса */
+.address-section {
+  margin-left: 215px;
+  margin-bottom: 60px;
+  /* outline: 1px solid green; */
+}
+
 .footer-link {
   color: rgba(255, 255, 255, 0.6);
 }
+
+.footer-list-item {
+ font-style: normal;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em; 
+}
+
+.footer-list-item:not(:last-child) {
+  padding-bottom: 3px;
+}
+
 /* адреса  */
-.footer-link-map {
+.footer-link.map {
   color: var(--prime-bg-color--);
 }
 
