@@ -63,6 +63,7 @@ a {
 .btn {
   font-family: var(--prime-font-family--);
   border: none;
+  cursor: pointer;
 }
 
 .uppercase {
@@ -78,6 +79,7 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--title-color--);
+   margin: 0;
 }
 /* h2 */
 .title-second {
@@ -87,6 +89,7 @@ a {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-ccolor--);
+   margin: 0;
 }
 /* h3 */
 .title-third {
@@ -97,6 +100,7 @@ a {
   text-align: center;
   /* text-transform: uppercase; */
   color: var(--title-ccolor--);
+   margin: 0;
 }
 /* стилі header */
 /* Навігація по сторінках сайта */
@@ -176,37 +180,42 @@ a {
 /* секція hero */
 /* hero - title-first */
 .hero-section {
+  padding-top: 200px;
   color: var(--prime-bg-color--); /*білий*шрифт */
   background-color: var(--second-bg-color--); /*темн осірий фон*/
   text-align: center;
-  /* width: 1600px;
-    height: 600px;
-    left: 0px;
-    top: 80px; */
+   border: 0px solid transparent;
+}
+.title-first.hero-title {
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 30px;
+  width: 696px;
+ 
 }
 
 .hero-button {
+  margin-bottomt:200px;
+  padding:10px 32px;
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
   background-color: var(--accent-color--);
   color: var(--prime-bg-color);
-  cursor: pointer;
+ 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   display: inline-block;
-  margin: 30px auto;
+  margin-bottom:200px;
   /* margin-top:30px; */
   text-align: center;
 }
 .hero-button:focus,
 .hero-button:hover {
   background: #188ce8;
-  /* mix-blend-mode: normal;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px; */
 }
+
 /* секція Особливості */
 /* .feature-section */
 /* h2 схований */
@@ -314,11 +323,11 @@ a {
 }
 
 .logo.icon {
-  display:block;
+  display: block;
   margin-top: 60px;
   margin-left: 215px;
   margin-bottom: 20px;
-  padding-right:7px;
+  padding-right: 7px;
   /* outline: 1px solid red; */
 }
 /* блок адреса */
@@ -333,10 +342,10 @@ a {
 }
 
 .footer-list-item {
- font-style: normal;
+  font-style: normal;
   font-size: 14px;
   line-height: calc(24 / 14);
-  letter-spacing: 0.03em; 
+  letter-spacing: 0.03em;
 }
 
 .footer-list-item:not(:last-child) {
