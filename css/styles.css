@@ -16,25 +16,49 @@ body {
   font-family: var(--prime-font-family--); /*'Roboto', sans-serif*/
   color: var(--text-color--);
   background-color: var(--prime-bg-color--);
+  width:1600px;
+}
+
+/* reset */
+h1,h2,h3,h4,h5,h6,p {
+  margin:0;
+}
+/* .title-first,.title-second,.title-third{
+   margin:0;
+} */
+ul {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+li {
+  margin:0;
+  padding:0;
+}
+img {
+  display:block;
+}
+a {
+  text-decoration: none;
 }
 /* скриває елемент */
 .visually-hidden {
   position: fixed;
   transform: scale(0);
 }
-/* забирає маркер спимку */
-.list {
-  list-style: none;
+/* контейнер для feature/deal/team-list/portfolio */
+/* header/footer/hero/ourteam ширина 1600 тому обмежела body 1600 */
+.container{
+  width:1200px;
+  margin:0 auto;/*вертик забирає горизонтально центрує*/
 }
+
 /* забирає рамку */
 .btn {
   font-family: var(--prime-font-family--);
   border: none;
-}
-/* забирає підкреслення  */
-.link {
-  text-decoration: none;
-}
+ }
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -48,9 +72,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--title-color--);
-  margin-top:200px;
-  /* margin-bottom:30px; */
-}
+ }
 /* h2 */
 .title-second {
   font-weight: 700;
@@ -93,20 +115,49 @@ body {
 .logo.studio {
   color: #000;
 }
+/* весь header у flex container */
+.header-section {
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  padding-top: 24px;
+  padding-bottom:25px;
+  outline:1px dashed red;
+  }
 
-/* вигляд мейл і телефон */
-.header-contact {
-  color: var(--text-color--);
+/* навігація  в header  flex container*/
+.header-nav-list{
+  display:flex;
+  justify-content: space-between;
+  /* margin-left:93px; */
 }
 /* вигляд елементів списка посилань навігації */
-.header-nav {
+.header-nav-link {
   color: var(--title-ccolor--);
+  margin-right:50px;
+}
+.header-nav-item:last-child{
+  margin-right:0;
+}
+
+.header-contact-list{
+  display:flex;
+}
+.header-contact-item{
+  margin-left:50px;
+}
+.header-contact-item:first-child{
+  margin-left:0;
+}
+/* вигляд мейл і телефон */
+.header-contact-link {
+  color: var(--text-color--);
 }
 /* реакція на наведення на елемент списка посилання  */
-.header-nav:focus,
-.header-nav:hover,
-.header-contact:focus,
-.header-contact:hover {
+.header-nav-link:focus,
+.header-nav-link:hover,
+.header-contact-link:focus,
+.header-contact-link:hover {
   color: var(--accent-color--);
 }
 /* підсвітка посилання активної сторінки */
@@ -152,6 +203,7 @@ body {
   border-radius: 4px; */
 }
 /* секція Особливості */
+/* .feature-section */
 /* h2 схований */
 /* h3 - .tille-third */
 .feature-text {
@@ -168,7 +220,7 @@ body {
 }
 /* секція Наша команда */
 /* h2 Наша команда - title-second */
-.section-team {
+.team-section {
   /* width: 1600px;
     height: 648px;
     left: 0px;

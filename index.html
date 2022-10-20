@@ -8,42 +8,49 @@
     <!-- спочатку шрифти -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    />
     <!--  нормалізатор -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
     <!-- мої стилі -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- шапка сайта з навігацією-->
     <header class="header-section">
-      <a class="link" href="./index.html">
+      <!--Logo-->
+      <a class="logo" href="./index.html">
         <span class="logo web">Web</span>
         <span class="logo studio">Studio</span>
       </a>
       <!-- Навігація по сторінках сайта -->
-      <nav>
-        <ul class="header-nav list">
+      <nav class="header-nav">
+        <ul class="header-nav-list">
           <li class="header-nav-item">
-            <a class="header-nav link current" href="./index.html">Студія</a>
+            <a class="header-nav-link current" href="./index.html">Студія</a>
           </li>
           <li class="header-nav-item">
-            <a class="header-nav link" href="./portfolio.html">Портфоліо</a>
+            <a class="header-nav-link" href="./portfolio.html">Портфоліо</a>
           </li>
           <li class="header-nav-item">
-            <a class="header-nav link" href="#contacts">Контакти</a>
+            <a class="header-nav-link" href="#contacts">Контакти</a>
           </li>
         </ul>
       </nav>
       <!-- Лінки контактів -->
-      <ul class="header-contact list">
+      <ul class="header-contact-list">
         <li class="header-contact-item">
-          <a class="header-contact link" href="mailto:info@devstudio.com"
-            >info@devstudio.com</a
-          >
+          <a class="header-contact-link" href="mailto:info@devstudio.com"
+            >info@devstudio.com
+          </a>
         </li>
         <li class="header-contact-item">
-          <a class="header-contact link" href="tel:+380961111111"
+          <a class="header-contact-link" href="tel:+380961111111"
             >+38 096 111 11 11</a
           >
         </li>
@@ -53,74 +60,79 @@
     <main>
       <!--Головний банер  сайта -->
       <section class="hero-section">
-        <h1 class="title-first ">
-          Ефективні рішення для <br />вашого бізнесу
-        </h1>
-        <button class="hero-button btn" type="button" >Замовити послугу</button>
+        <h1 class="title-first">Ефективні рішення для <br />вашого бізнесу</h1>
+        <button class="hero-button btn" type="button">Замовити послугу</button>
       </section>
       <!-- Особливості -->
-      <section class="section">
-        <h2 class="feature-title title-second visually-hidden">Особливості</h2>
-        <ul class="feature-list list">
-          <li>
-            <h3 class="title-third uppercase">увага до деталей</h3>
-            <p class="feature-text">
-              Ідейні міркування, і навіть початок повсякденної роботи з
-              формування позиції.
-            </p>
-          </li>
-          <li>
-            <h3 class="title-third uppercase">пунктуальність</h3>
-            <p class="feature-text">
-              Завдання організації, особливо рамки і місце навчання кадрів тягне
-              у себе.
-            </p>
-          </li>
-          <li>
-            <h3 class="title-third uppercase">планування</h3>
-            <p class="feature-text">
-              Так само консультація з широким активом значною мірою зумовлює.
-            </p>
-          </li>
-          <li>
-            <h3 class="title-third uppercase">сучасні технології</h3>
-            <p class="feature-text">
-              Значимість цих проблем настільки очевидна, що реалізація планових
-              завдань.
-            </p>
-          </li>
-        </ul>
+      <section class="feature-section">
+        <div class="container">
+          <h2 class="feature-title title-second visually-hidden">
+            Особливості
+          </h2>
+          <ul class="feature-list list">
+            <li>
+              <h3 class="title-third uppercase">увага до деталей</h3>
+              <p class="feature-text">
+                Ідейні міркування, і навіть початок повсякденної роботи з
+                формування позиції.
+              </p>
+            </li>
+            <li>
+              <h3 class="title-third uppercase">пунктуальність</h3>
+              <p class="feature-text">
+                Завдання організації, особливо рамки і місце навчання кадрів
+                тягне у себе.
+              </p>
+            </li>
+            <li>
+              <h3 class="title-third uppercase">планування</h3>
+              <p class="feature-text">
+                Так само консультація з широким активом значною мірою зумовлює.
+              </p>
+            </li>
+            <li>
+              <h3 class="title-third uppercase">сучасні технології</h3>
+              <p class="feature-text">
+                Значимість цих проблем настільки очевидна, що реалізація
+                планових завдань.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
       <!-- Чим ми займаємося deal-->
-      <section class="section">
-        <h2 class="title-second">Чим ми займаємося</h2>
-        <ul class="deal-list list">
-          <li class="deal-item">
-            <img
-              class="deal-img"
-              src="./images/view1.jpg"
-              alt="Найкращі алгоритми"
-            />
-          </li>
-          <li class="deal-item">
-            <img
-              class="deal-img"
-              src="./images/view2.jpg"
-              alt="Адаптуємо до різних дівайсів "
-            />
-          </li>
-          <li class="deal-item">
-            <img
-              class="deal-img"
-              src="./images/view3.jpg"
-              alt="Професійний дизайн"
-            />
-          </li>
-        </ul>
+      <section class="deal-section">
+        <div class="container">
+          <h2 class="title-second">Чим ми займаємося</h2>
+          <ul class="deal-list list">
+            <li class="deal-item">
+              <img
+                class="deal-img"
+                src="./images/view1.jpg"
+                alt="Найкращі алгоритми"
+              />
+            </li>
+            <li class="deal-item">
+              <img
+                class="deal-img"
+                src="./images/view2.jpg"
+                alt="Адаптуємо до різних дівайсів "
+              />
+            </li>
+            <li class="deal-item">
+              <img
+                class="deal-img"
+                src="./images/view3.jpg"
+                alt="Професійний дизайн"
+              />
+            </li>
+          </ul>
+        </div>
       </section>
       <!-- Наша команда -->
-      <section class="section-team">
+      <section class="team-section">
         <h2 class="team-title title-second">Наша команда</h2>
+        <div class="container">
         <ul class="team-list list">
           <li class="team-card-item">
             <img
@@ -159,9 +171,10 @@
             <p class="card-position">UI Designer</p>
           </li>
         </ul>
+        </div>
       </section>
     </main>
-    <footer id="contacts" class="footer-section">
+    <footer  class="footer-section" id="contacts">
       <a class="logo link" href="./index.html"
         ><span class="logo web">Web</span
         ><span class="logo studio">Studio</span>
