@@ -29,9 +29,7 @@ h6,
 p {
   margin: 0;
 }
-/* .title-first,.title-second,.title-third{
-   margin:0;
-} */
+
 ul {
   margin: 0;
   padding: 0;
@@ -47,19 +45,20 @@ img {
 a {
   text-decoration: none;
 }
+
 /* скриває елемент */
 .visually-hidden {
   position: fixed;
   transform: scale(0);
 }
-/* контейнер для feature/deal/team-list/portfolio */
-/* header/footer/hero/ourteam ширина 1600 тому обмежела body 1600 */
+/* контейнер  */
 .container {
   width: 1200px;
   margin: 0 auto; /*вертик забирає горизонтально центрує*/
+  padding: 0 15px;
 }
 
-/* забирає рамку */
+/*налаштування для кнопок */
 .btn {
   font-family: var(--prime-font-family--);
   border: none;
@@ -79,8 +78,7 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--title-color--);
-   margin: 0;
-}
+  }
 /* h2 */
 .title-second {
   font-weight: 700;
@@ -89,8 +87,7 @@ a {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-ccolor--);
-   margin: 0;
-}
+ }
 /* h3 */
 .title-third {
   font-weight: 700;
@@ -100,10 +97,13 @@ a {
   text-align: center;
   /* text-transform: uppercase; */
   color: var(--title-ccolor--);
-   margin: 0;
+ }
+ /* спільна властивість секцій */
+.section {
+  margin-bottom: 94px;
 }
 /* стилі header */
-/* Навігація по сторінках сайта */
+
 .header-section {
   /* спільний шрифт */
   font-weight: 500;
@@ -113,7 +113,7 @@ a {
 }
 /* logo */
 .logo {
-  font-family: "Raleway", sans-serif; /*var*/
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
@@ -125,94 +125,87 @@ a {
 .logo.studio {
   color: #000;
 }
+
 /* весь header у flex container */
-.header-section {
+.header-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding-top: 24px;
   padding-bottom: 25px;
-  /* outline: 1px dashed red; */
 }
-
+/* Навігація по сторінках сайта */
 /* навігація  в header  flex container*/
 .header-nav-list {
   display: flex;
   justify-content: space-between;
-  /* margin-left:93px; */
 }
-/* вигляд елементів списка посилань навігації */
-.header-nav-link {
-  color: var(--title-ccolor--);
+/* елементи навігації */
+.header-nav-item:not(:last-child) {
   margin-right: 50px;
 }
-.header-nav-item:last-child {
-  margin-right: 0;
+/* padding link збільшує зону клікабельності */
+.header-nav-link {
+  color: var(--title-ccolor--);
+  padding: 32px 0px;
 }
-
+/* підсвітка посилання активної сторінки */
+.current {
+  color: var(--accent-color--);
+}
+/* Контакт ліст у flex щоб поставити у рядок */
 .header-contact-list {
   display: flex;
 }
-.header-contact-item {
+.header-contact-item:not(:first-child) {
   margin-left: 50px;
 }
-.header-contact-item:first-child {
-  margin-left: 0;
-}
+
 /* вигляд мейл і телефон */
 .header-contact-link {
   color: var(--text-color--);
+  padding: 32px 0px;
 }
 /* реакція на наведення на елемент списка посилання  */
 .header-nav-link:focus,
 .header-nav-link:hover,
-.header-contact-link:focus,
+.header-contact0link:focus,
 .header-contact-link:hover {
   color: var(--accent-color--);
 }
-/* підсвітка посилання активної сторінки */
-/* підкреслює активований лінк навігації */
-.current {
-  color: var(--accent-color--);
-}
-.section {
-   margin-bottom:94px;
-}
+
 /* стилі index */
 /* секція hero */
-/* hero - title-first */
+/* hero  title-first */
+
 .hero-section {
-  padding-top: 200px;
   color: var(--prime-bg-color--); /*білий*шрифт */
   background-color: var(--second-bg-color--); /*темн осірий фон*/
   text-align: center;
-  /* margin-bottom:94px; */
-  border: 0px solid transparent;
-
 }
+
 .title-first.hero-title {
-  margin-left:auto;
-  margin-right:auto;
+  padding-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
   width: 696px;
- 
 }
 
 .hero-button {
-  margin-bottomt:200px;
-  padding:10px 32px;
+  margin-bottom: 200px;
+  padding: 10px 32px;
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
   background-color: var(--accent-color--);
   color: var(--prime-bg-color);
- 
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   display: inline-block;
-  margin-bottom:200px;
-  /* margin-top:30px; */
+  margin-bottom: 200px;
   text-align: center;
 }
 .hero-button:focus,
@@ -230,18 +223,17 @@ a {
 /* На макеті ж по 215px до feature-list */
 /* feature-list дитина container отже обмежена 1200px*/
 /* щоб звузити ширину feature-list до 1170px */
-/* треба додати  по 15px з left/right  чим звузиться контент */
+/*  15px padding left/right відcontainer звузиться контент ctrws] */
 
 /* список feature ставимо в рядок */
 .feature-list {
-  display:flex;
-  justify-content:space-between;
-  margin: 0 15px;
+  display: flex;
+  justify-content: space-between;
 }
 /* заголовки в li feature-list */
-.feature-list .title-third{
-  text-align:left;
-  margin-bottom:10px;
+.feature-list .title-third {
+  text-align: left;
+  margin-bottom: 10px;
 }
 /* p в li */
 .feature-text {
@@ -253,65 +245,81 @@ a {
 /* колекція контайнера flex-list * /
 /* всі елементи однакової величини на main axis */
 .feature-list-item {
-  flex-basis:270px;
- }
- /* відстань між всіма ел-ми колекції крім останнього */
-.feature-list-item:not(:last-child){
-  margin-right:30px;
+  flex-basis: 270px;
+}
+/* відстань між всіма ел-ми колекції крім останнього */
+.feature-list-item:not(:last-child) {
+  margin-right: 30px;
 }
 /* секція deal Чим ми займаємось */
 /*h2 - .title-second*/
 
 .container .deal {
-margin: 0px 15px;
+  margin: 0px 15px;
 }
 
-.title-second.deal-title{
-margin-bottom:50px;
-margin-left:15px;
-margin-right:15px;
+.title-second.deal-title {
+  margin-bottom: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 /* картинки в рядок */
-.deal-list{
-display:flex;
-justify-content: space-between;
-margin: 0px 15px;
+.deal-list {
+  display: flex;
+  justify-content: space-between;
 }
 /* Якщо змінити к-ть картинок поки не знаю що написати замість 3 */
 /* img  діти li які є ел-ми flex container тому унаслідують наступне  */
 .deal-list-item {
-  flex-basis: calc((100%-5%)/3);
+  flex-basis: calc((100%-5%) / 3);
 }
 /* підозрюю що рохміри img треба пропорційно до різних екранів */
 /* .deal-list-img {
   width: 370px;
   max-height: 294px;
  } */
- /* .deal-list-item:not(:last-child) {
+/* .deal-list-item:not(:last-child) {
   margin-right:30px;
  } */
+
 /* секція Наша команда */
 /* h2 Наша команда - title-second */
 .team-section {
-  /* width: 1600px;
-    height: 648px;
-    left: 0px;
-    top: 1446px;  */
   background: #f5f4fa;
+  padding-top: 94px;
+  border: 0px solid transparent;
 }
+
+.team-title.title-second {
+  /* text-align:center; */
+  margin-bottom: 50px;
+}
+
+.team-cards-list {
+  display: flex;
+  flex-basis: calc((100%-5%) / 4);
+}
+
 .team-card-item {
-  width: 270px;
-  height: 368px;
-  left: 815px;
-  top: 1632px;
   background-color: var(--prime-bg-color--);
+  margin-right: 30px;
+}
+
+.team-card-item:last-child {
+  margin-right: 0px;
 }
 
 .card-image {
+  display: block;
   width: 270px;
-  height: 260px;
+  margin-bottom: 30px;
+  /* height: 260px; */
 }
 /* h3 - card-name title-second */
+.card-name {
+  margin-bottom: 10px;
+}
+
 /* position */
 .card-position {
   font-size: 16px;
@@ -319,6 +327,7 @@ margin: 0px 15px;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color--);
+  margin-bottom: 30px;
 }
 
 /* стилі portfolio */
@@ -382,7 +391,7 @@ margin: 0px 15px;
 
 .logo.icon {
   display: block;
-  margin-top: 60px;
+  padding-top: 60px;
   margin-left: 215px;
   margin-bottom: 20px;
   padding-right: 7px;

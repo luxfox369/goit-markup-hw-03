@@ -24,43 +24,47 @@
     <!-- шапка сайта з навігацією-->
     <header class="header-section">
       <!--Logo-->
-      <a class="logo" href="./index.html">
-        <span class="logo web">Web</span>
-        <span class="logo studio">Studio</span>
-      </a>
-      <!-- Навігація по сторінках сайта -->
-      <nav class="header-nav">
-        <ul class="header-nav-list">
-          <li class="header-nav-item">
-            <a class="header-nav-link current" href="./index.html">Студія</a>
+      <div class="container header-container">
+        <a class="logo" href="./index.html">
+          <span class="logo web">Web</span>
+          <span class="logo studio">Studio</span>
+        </a>
+        <!-- Навігація по сторінках сайта -->
+        <nav class="header-nav">
+          <ul class="header-nav-list">
+            <li class="header-nav-item">
+              <a class="header-nav-link current" href="./index.html">Студія</a>
+            </li>
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="#contacts">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Лінки контактів -->
+        <ul class="header-contact-list">
+          <li class="header-contact-item">
+            <a class="header-contact-link" href="mailto:info@devstudio.com"
+              >info@devstudio.com
+            </a>
           </li>
-          <li class="header-nav-item">
-            <a class="header-nav-link" href="./portfolio.html">Портфоліо</a>
-          </li>
-          <li class="header-nav-item">
-            <a class="header-nav-link" href="#contacts">Контакти</a>
+          <li class="header-contact-item">
+            <a class="header-contact-link" href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
           </li>
         </ul>
-      </nav>
-      <!-- Лінки контактів -->
-      <ul class="header-contact-list">
-        <li class="header-contact-item">
-          <a class="header-contact-link" href="mailto:info@devstudio.com"
-            >info@devstudio.com
-          </a>
-        </li>
-        <li class="header-contact-item">
-          <a class="header-contact-link" href="tel:+380961111111"
-            >+38 096 111 11 11</a
-          >
-        </li>
-      </ul>
+      </div>
     </header>
     <!-- унікальний контент сторінки -->
     <main>
       <!--Головний банер  сайта -->
       <section class="hero-section section">
-        <h1 class="title-first hero-title">Ефективні рішення для вашого бізнесу</h1>
+        <h1 class="title-first hero-title">
+          Ефективні рішення для вашого бізнесу
+        </h1>
         <button class="hero-button btn" type="button">Замовити послугу</button>
       </section>
       <!-- Особливості -->
@@ -70,7 +74,7 @@
             Особливості
           </h2>
           <ul class="feature-list">
-            <li  class="feature-list-item">
+            <li class="feature-list-item">
               <h3 class="title-third uppercase">увага до деталей</h3>
               <p class="feature-text">
                 Ідейні міркування, і навіть початок повсякденної роботи з
@@ -130,10 +134,9 @@
         </div>
       </section>
       <!-- Наша команда -->
-      <section class="team-section ">
+      <section class="team-section">
         <h2 class="team-title title-second">Наша команда</h2>
-        <div class="container">
-        <ul class="team-list list">
+        <ul class="team-cards-list container section">
           <li class="team-card-item">
             <img
               class="card-image"
@@ -171,10 +174,9 @@
             <p class="card-position">UI Designer</p>
           </li>
         </ul>
-        </div>
       </section>
     </main>
-    <footer  class="footer-section" id="contacts">
+    <footer class="footer-section" id="contacts">
       <a class="logo icon" href="./index.html"
         ><span class="logo web">Web</span
         ><span class="logo studio">Studio</span>
