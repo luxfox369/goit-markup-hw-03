@@ -175,7 +175,9 @@ a {
 .current {
   color: var(--accent-color--);
 }
-
+.section {
+   margin-bottom:94px;
+}
 /* стилі index */
 /* секція hero */
 /* hero - title-first */
@@ -184,7 +186,9 @@ a {
   color: var(--prime-bg-color--); /*білий*шрифт */
   background-color: var(--second-bg-color--); /*темн осірий фон*/
   text-align: center;
-   border: 0px solid transparent;
+  /* margin-bottom:94px; */
+  border: 0px solid transparent;
+
 }
 .title-first.hero-title {
   margin-left:auto;
@@ -217,14 +221,43 @@ a {
 }
 
 /* секція Особливості */
-/* .feature-section */
+/* feature-section */
 /* h2 схований */
 /* h3 - .tille-third */
+/* feature-section обгорнута в  container 1200px */
+/* body мінус container 1600-1200=400px  */
+/* отже margin left/right по 200px */
+/* На макеті ж по 215px до feature-list */
+/* feature-list дитина container отже обмежена 1200px*/
+/* щоб звузити ширину feature-list до 1170px */
+/* треба додати  по 15px з left/right  чим звузиться контент */
+
+/* список feature ставимо в рядок */
+.feature-list {
+  display:flex;
+  justify-content:space-between;
+  margin: 0 15px;
+}
+/* заголовки в li feature-list */
+.feature-list .title-third{
+  text-align:left;
+  margin-bottom:10px;
+}
+/* p в li */
 .feature-text {
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: var(--text-color--);
+}
+/* колекція контайнера flex-list * /
+/* всі елементи однакової величини на main axis */
+.feature-list-item {
+  flex-basis:270px;
+ }
+ /* відстань між всіма ел-ми колекції крім останнього */
+.feature-list-item:not(:last-child){
+  margin-right:30px;
 }
 /* секція Чим ми займаємось */
 /*h2 - .title-second*/
