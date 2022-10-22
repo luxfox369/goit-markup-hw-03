@@ -78,7 +78,7 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--title-color--);
-  }
+}
 /* h2 */
 .title-second {
   font-weight: 700;
@@ -87,7 +87,7 @@ a {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-ccolor--);
- }
+}
 /* h3 */
 .title-third {
   font-weight: 700;
@@ -97,8 +97,8 @@ a {
   text-align: center;
   /* text-transform: uppercase; */
   color: var(--title-ccolor--);
- }
- /* спільна властивість секцій */
+}
+/* спільна властивість секцій */
 .section {
   margin-bottom: 94px;
 }
@@ -115,14 +115,16 @@ a {
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
+  font-style: normal;
   font-size: 26px;
-  line-height: calc(31 / 26);
+  line-height: calc(31/26);
   letter-spacing: 3%;
+  padding-right: 3px;
 }
-.logo.web {
+.logo-web {
   color: var(--accent-color--);
 }
-.logo.studio {
+.logo-studio {
   color: #000;
 }
 
@@ -287,7 +289,7 @@ a {
 .team-section {
   background: #f5f4fa;
   padding-top: 94px;
-  border: 0px solid transparent;
+  padding-bottom: 94px;
 }
 
 .team-title.title-second {
@@ -297,11 +299,14 @@ a {
 
 .team-cards-list {
   display: flex;
-  flex-basis: calc((100%-5%) / 4);
+  flex-basis: calc((100%-30px * 3) / 4);
 }
 
 .team-card-item {
   background-color: var(--prime-bg-color--);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
   margin-right: 30px;
 }
 
@@ -317,13 +322,19 @@ a {
 }
 /* h3 - card-name title-second */
 .card-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(18.75 / 1 6);
+  letter-spacing: 0.03em;
+  color: var(--title-ccolor--);
+  text-align: center;
   margin-bottom: 10px;
 }
 
 /* position */
 .card-position {
   font-size: 16px;
-  line-height: calc(19 / 16);
+  line-height: calc(18.75 / 16);
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color--);
@@ -332,7 +343,6 @@ a {
 
 /* стилі portfolio */
 /* h1 Портфоліо -title-first схований */
-
 /* кнопки фільтра проектів */
 .filter-button {
   font-weight: 500;
@@ -346,7 +356,9 @@ a {
   border: none;
   cursor: pointer;
 }
+
 /* кнопки фільтра проектів при hover */
+
 .filter-button:focus,
 .filter-button:hover {
   color: var(--prime-bg-color--);
@@ -389,20 +401,17 @@ a {
   color: var(--prime-bg-color--);
 }
 
-.logo.icon {
-  display: block;
-  padding-top: 60px;
+.logo-icon {
+  margin-top: 60px;
   margin-left: 215px;
   margin-bottom: 20px;
-  padding-right: 7px;
-  /* outline: 1px solid red; */
+  
 }
 /* блок адреса */
 .address-section {
   margin-left: 215px;
   margin-bottom: 60px;
-  /* outline: 1px solid green; */
-}
+ }
 
 .footer-link {
   color: rgba(255, 255, 255, 0.6);
@@ -410,13 +419,14 @@ a {
 
 .footer-list-item {
   font-style: normal;
+  font-weight:400;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
 }
 
 .footer-list-item:not(:last-child) {
-  padding-bottom: 3px;
+  margin-bottom: 9px;
 }
 
 /* адреса  */
