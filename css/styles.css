@@ -20,7 +20,7 @@ body {
   width: 1600px;
 }
 
-/* reset */
+/* reset  обнулюємо відступи/стилі призначені browser*/
 h1,
 h2,
 h3,
@@ -40,6 +40,7 @@ li {
   margin: 0;
   padding: 0;
 }
+
 img {
   display: block;
 }
@@ -104,6 +105,8 @@ a {
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+  border-bottom: 1px solid#ECECEC;
+  /* margin-bottom:21px; */
 }
 /* logo */
 .logo {
@@ -113,7 +116,9 @@ a {
   font-size: 26px;
   line-height: calc(31 / 26);
   letter-spacing: 3%;
-  padding-right: 3px;
+}
+.logo.header {
+  display: flex;
 }
 .logo.web {
   color: var(--accent-color--);
@@ -219,7 +224,7 @@ a {
 /* На макеті ж по 215px до feature-list */
 /* feature-list дитина container отже обмежена 1200px*/
 /* щоб звузити ширину feature-list до 1170px */
-/*  15px padding left/right відcontainer звузиться контент ctrws] */
+/*  15px padding left/right від container звузиться контент секції */
 
 /* список feature ставимо в рядок */
 .feature-list {
@@ -307,7 +312,55 @@ a {
 .team-card-item:last-child {
   margin-right: 0px;
 }
+/* porfolio section */
+/* h1 Портфоліо -title-first схований */
+/* розширяємо секцію щоб контент відступаєв від фільтра */
+.portfolio-section {
+  padding-top: 94px;
+}
 
+/*загальне налаштування для кнопок */
+.btn {
+  font-family: var(--prime-font-family--);
+  border: none;
+  cursor: pointer;
+}
+/* активна кнопка */
+.active {
+  color: var(--prime-bg-color--);
+  background: var(--accent-color--);
+}
+
+/* дизайн кнопки портфоліо */
+.filter-button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-ccolor--);
+  background: var(--button-bg-color--);
+  border-radius: 4px;
+}
+/* кнопки фільтра проектів */
+/* ставимо в рядок - flex container */
+
+.filter-list {
+  display: flex;
+  width: 575px;
+  margin: 0 auto;
+  justify-content: space-between;
+  row-gap: 8px;
+  padding-bottom: 26px;
+  margin-bottom: 34px;
+}
+
+/* кнопки фільтра проектів при hover */
+.filter-button:focus,
+.filter-button:hover {
+  color: var(--prime-bg-color--);
+  background-color: var(--accent-color--);
+}
 .card-image {
   display: block;
   width: 270px;
@@ -335,79 +388,23 @@ a {
   margin-bottom: 30px;
 }
 
-/* стилі portfolio */
-/* h1 Портфоліо -title-first схований */
-/* кнопки фільтра проектів */
-/* кнопки в рядок flex container */
-
-/* відступаємо від сусіда */
-.portfolio-section {
-  padding-top: 94px;
-  border-top: 1px solid#EEEEEE
-}
-
-/*загальне налаштування для кнопок */
-.btn {
-  font-family: var(--prime-font-family--);
-  border: none;
-  cursor: pointer;
-}
-/* активна кнопка */
-.active {
-  color: var(--prime-bg-color--);
-  background: var(--accent-color--);
-}
-
-/* дизайн кнопки портфоліо */
-.filter-button {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: calc(26 / 16);
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--title-ccolor--);
-  background: var(--button-bg-color--);
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-}
-
-/* кноопки в рядок */
-.filter-list {
-  display: flex;
-  width: 575px;
-  margin: 0 auto;
-  justify-content: space-between;
-  row-gap: 8px;
-  padding-bottom: 26px;
-  margin-bottom: 34px;
-}
-
-/* кнопки фільтра проектів при hover */
-.filter-button:focus,
-.filter-button:hover {
-  color: var(--prime-bg-color--);
-  background-color: var(--accent-color--);
-}
 /* проекти в рядок з переносом по 4 з gap 30зч */
 .projects-list {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  flex-basis: calc((100%-30sepx * 2) / 3);
+  flex-basis: calc((100%-30px * 2) / 3);
 }
 .project-item {
   text-align: center;
-  background: #FFFFFF;
-border: 1px solid #EEEEEE;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
 }
 /* projects */
 /* h2 - title-econd  */
 .project-img {
   width: 370px;
   height: 294px;
-  border: 1px;
-  border-color: #eeeeee;
 }
 
 /* згрупування під карткою портфоліо */
@@ -417,7 +414,7 @@ border: 1px solid #EEEEEE;
   padding-right: 24px;
   padding-bottom: 20px;
   padding-top: 20px;
- }
+}
 
 /*h2 title-project */
 .project-title {
@@ -439,35 +436,38 @@ border: 1px solid #EEEEEE;
 /* стилі footer*/
 .footer-section {
   background-color: var(--second-bg-color--);
-  border: 1px solid transparent;
+  /* border-top: 0px solid transparent; */
 }
 /* спільний шрифт для блоку address */
 .footer-section .logo.studio {
   color: var(--prime-bg-color--);
 }
-
-.logo.icon {
-  margin-top: 60px;
+/* обгорнули в div щоб зобити блочним*/
+.logo-icon {
+  padding-top: 60px;
   margin-left: 215px;
   margin-bottom: 20px;
 }
 /* блок адреса */
 .address-section {
   margin-left: 215px;
-  margin-bottom: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-link {
   color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+  font-size: 14px;
+  line-height: calc(21 / 14);
+  letter-spacing: 0.03em;
 }
 
-.footer-list-item {
+/* .footer-list-item {
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
-}
+} */
 
 .footer-list-item:not(:last-child) {
   margin-bottom: 9px;
