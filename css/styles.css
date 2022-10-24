@@ -17,7 +17,6 @@ body {
   font-family: var(--prime-font-family--); /*'Roboto', sans-serif*/
   color: var(--text-color--);
   background-color: var(--prime-bg-color--);
-  width: 1600px;
 }
 
 /* reset  обнулюємо відступи/стилі призначені browser*/
@@ -47,18 +46,40 @@ img {
 a {
   text-decoration: none;
 }
+/*загальне налаштування для кнопок */
+.btn {
+  font-family: var(--prime-font-family--);
+  border: none;
+  cursor: pointer;
+}
+/* активна кнопка */
+.active {
+  color: var(--prime-bg-color--);
+  background: var(--accent-color--);
+}
 
 /* скриває елемент */
 .visually-hidden {
   position: fixed;
   transform: scale(0);
 }
-/* контейнер  */
+/* більший контейнер */
+.big-container{
+  width: 1600px;
+  margin: 0 auto; /* горизонт центрує блоковий*/
+}
+
+/* меньший контейнер  */
 .container {
   width: 1200px;
-  margin: 0 auto; /*вертик забирає горизонтально центрує*/
+  margin: 0 auto; /*вертик забирає горизонт центрує блоковий*/
   padding: 0 15px;
 }
+/* спільна властивість секцій */
+.section {
+  padding-bottom: 94px;
+  
+ }
 
 .uppercase {
   text-transform: uppercase;
@@ -93,10 +114,7 @@ a {
   /* text-transform: uppercase; */
   color: var(--title-ccolor--);
 }
-/* спільна властивість секцій */
-.section {
-  margin-bottom: 94px;
-}
+
 /* стилі header */
 
 .header-section {
@@ -105,7 +123,7 @@ a {
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
-  border-bottom: 1px solid#ECECEC;
+  
   /* margin-bottom:21px; */
 }
 /* logo */
@@ -134,6 +152,7 @@ a {
   align-items: center;
   padding-top: 24px;
   padding-bottom: 25px;
+  border-bottom: 1px solid#ECECEC;
 }
 /* Навігація по сторінках сайта */
 /* навігація  в header  flex container*/
@@ -182,11 +201,11 @@ a {
 .hero-section {
   color: var(--prime-bg-color--); /*білий*шрифт */
   background-color: var(--second-bg-color--); /*темн осірий фон*/
-  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .title-first.hero-title {
-  padding-top: 200px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -194,7 +213,6 @@ a {
 }
 
 .hero-button {
-  margin-bottom: 200px;
   padding: 10px 32px;
   font-weight: 700;
   font-size: 16px;
@@ -202,12 +220,10 @@ a {
   letter-spacing: 0.06em;
   background-color: var(--accent-color--);
   color: var(--prime-bg-color);
-
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  display: inline-block;
-  margin-bottom: 200px;
-  text-align: center;
+  display:block;
+  margin: 0 auto; /*вертик забирає горизонтально центрує*/
 }
 .hero-button:focus,
 .hero-button:hover {
@@ -219,12 +235,9 @@ a {
 /* h2 схований */
 /* h3 - .tille-third */
 /* feature-section обгорнута в  container 1200px */
-/* body мінус container 1600-1200=400px  */
-/* отже margin left/right по 200px */
-/* На макеті ж по 215px до feature-list */
-/* feature-list дитина container отже обмежена 1200px*/
-/* щоб звузити ширину feature-list до 1170px */
-/*  15px padding left/right від container звузиться контент секції */
+.feature-section {
+  padding-top: 94px;
+}
 
 /* список feature ставимо в рядок */
 .feature-list {
@@ -261,8 +274,6 @@ a {
 
 .title-second.deal-title {
   margin-bottom: 50px;
-  margin-left: 15px;
-  margin-right: 15px;
 }
 /* картинки в рядок */
 .deal-list {
@@ -272,13 +283,13 @@ a {
 /* Якщо змінити к-ть картинок поки не знаю що написати замість 3 */
 /* img  діти li які є ел-ми flex container тому унаслідують наступне  */
 .deal-list-item {
-  flex-basis: calc((100%-5%) / 3);
+  flex-basis: calc((100% - 30px * 2) / 3);
 }
 /* підозрюю що рохміри img треба пропорційно до різних екранів */
-/* .deal-list-img {
+.deal-list-img {
   width: 370px;
   max-height: 294px;
- } */
+}
 /* .deal-list-item:not(:last-child) {
   margin-right:30px;
  } */
@@ -292,13 +303,13 @@ a {
 }
 
 .team-title.title-second {
-  /* text-align:center; */
   margin-bottom: 50px;
 }
 
 .team-cards-list {
   display: flex;
   flex-basis: calc((100%-30px * 3) / 4);
+  justify-content: center;
 }
 
 .team-card-item {
@@ -319,18 +330,14 @@ a {
   padding-top: 94px;
 }
 
-/*загальне налаштування для кнопок */
-.btn {
-  font-family: var(--prime-font-family--);
-  border: none;
-  cursor: pointer;
+/* меню фільтра проектів */
+/* ставимо в рядок - flex container */
+.filter-list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
 }
-/* активна кнопка */
-.active {
-  color: var(--prime-bg-color--);
-  background: var(--accent-color--);
-}
-
 /* дизайн кнопки портфоліо */
 .filter-button {
   font-weight: 500;
@@ -341,18 +348,7 @@ a {
   color: var(--title-ccolor--);
   background: var(--button-bg-color--);
   border-radius: 4px;
-}
-/* кнопки фільтра проектів */
-/* ставимо в рядок - flex container */
-
-.filter-list {
-  display: flex;
-  width: 575px;
-  margin: 0 auto;
-  justify-content: space-between;
-  row-gap: 8px;
-  padding-bottom: 26px;
-  margin-bottom: 34px;
+  padding-bottom: 5px;
 }
 
 /* кнопки фільтра проектів при hover */
@@ -392,13 +388,12 @@ a {
 .projects-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 30px;
   flex-basis: calc((100%-30px * 2) / 3);
 }
 .project-item {
   text-align: center;
   background: #ffffff;
-  border: 1px solid #eeeeee;
 }
 /* projects */
 /* h2 - title-econd  */
@@ -414,6 +409,8 @@ a {
   padding-right: 24px;
   padding-bottom: 20px;
   padding-top: 20px;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 /*h2 title-project */
@@ -436,6 +433,8 @@ a {
 /* стилі footer*/
 .footer-section {
   background-color: var(--second-bg-color--);
+  padding-top: 60px;
+  padding-bottom: 60px;
   /* border-top: 0px solid transparent; */
 }
 /* спільний шрифт для блоку address */
@@ -443,15 +442,14 @@ a {
   color: var(--prime-bg-color--);
 }
 /* обгорнули в div щоб зобити блочним*/
-.logo-icon {
-  padding-top: 60px;
+.logo.footer {
+  display: block;
   margin-left: 215px;
   margin-bottom: 20px;
 }
 /* блок адреса */
 .address-section {
   margin-left: 215px;
-  padding-bottom: 60px;
 }
 
 .footer-link {
