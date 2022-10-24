@@ -144,7 +144,9 @@ a {
 .logo.studio {
   color: #000;
 }
-
+.header-section {
+  border-bottom: 1px solid#ECECEC;
+}
 /* весь header у flex container */
 .header-container {
   display: flex;
@@ -152,7 +154,7 @@ a {
   align-items: center;
   padding-top: 24px;
   padding-bottom: 25px;
-  border-bottom: 1px solid#ECECEC;
+ 
 }
 /* Навігація по сторінках сайта */
 /* навігація  в header  flex container*/
