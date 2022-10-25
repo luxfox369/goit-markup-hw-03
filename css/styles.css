@@ -64,10 +64,10 @@ a {
   transform: scale(0);
 }
 /* більший контейнер */
-.big-container{
+.big-container {
   width: 1600px;
-  margin: 0 auto; /* горизонт центрує блоковий*/
-}
+  margin: 0 auto; /* батько центрує  в собі*/
+}  
 
 /* меньший контейнер  */
 .container {
@@ -137,12 +137,16 @@ a {
 }
 .logo.header {
   display: flex;
+  
 }
 .logo.web {
   color: var(--accent-color--);
 }
 .logo.studio {
+  display:inline-block;
+  margin-right:93px;
   color: #000;
+
 }
 .header-section {
   border-bottom: 1px solid#ECECEC;
@@ -150,7 +154,7 @@ a {
 /* весь header у flex container */
 .header-container {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   padding-top: 24px;
   padding-bottom: 25px;
@@ -161,6 +165,7 @@ a {
 .header-nav-list {
   display: flex;
   justify-content: space-between;
+  margin-right:344px;
 }
 /* елементи навігації */
 .header-nav-item:not(:last-child) {
@@ -202,7 +207,7 @@ a {
 
 .hero-section {
   color: var(--prime-bg-color--); /*білий*шрифт */
-  background-color: var(--second-bg-color--); /*темн осірий фон*/
+  background: var(--second-bg-color--); /*темн осірий фон*/
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -333,30 +338,42 @@ a {
 }
 
 /* меню фільтра проектів */
-/* ставимо в рядок - flex container */
+/* ul - flex container */
 .filter-list {
   display: flex;
   justify-content: center;
   gap: 8px;
   margin-bottom: 50px;
+ 
 }
-/* дизайн кнопки портфоліо */
+.filter-item { /*li списка кнопок*/
+ margin:0;
+}
+/* кнопка фільтра за замовчанням inline */
+
 .filter-button {
+  display:inline-block;
+  text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(26 / 16);
-  text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-ccolor--);
   background: var(--button-bg-color--);
   border-radius: 4px;
-  padding-bottom: 5px;
-}
+  padding: 6px 22px;
+  margin:0;
+  
+  
+ }
+ .filter-button.all{
+ padding: 6px 25px;
+ }
 
 /* кнопки фільтра проектів при hover */
 .filter-button:focus,
 .filter-button:hover {
-  color: var(--prime-bg-color--);
+   color: var(--prime-bg-color--);
   background-color: var(--accent-color--);
 }
 .card-image {
@@ -407,10 +424,7 @@ a {
 /* згрупування під карткою портфоліо */
 .group-portfolio {
   text-align: left;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding:20px 0 20px 24px ;
   border: 1px solid #eeeeee;
   border-top: none;
 }
@@ -434,7 +448,7 @@ a {
 
 /* стилі footer*/
 .footer-section {
-  background-color: var(--second-bg-color--);
+  background: var(--second-bg-color--);
   padding-top: 60px;
   padding-bottom: 60px;
   /* border-top: 0px solid transparent; */
@@ -446,12 +460,12 @@ a {
 /* обгорнули в div щоб зобити блочним*/
 .logo.footer {
   display: block;
-  margin-left: 215px;
+  /* margin-left: 215px; */
   margin-bottom: 20px;
 }
 /* блок адреса */
 .address-section {
-  margin-left: 215px;
+  /* margin-left: 215px; */
 }
 
 .footer-link {
